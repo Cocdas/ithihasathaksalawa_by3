@@ -1,123 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Red Button Animation</title>
-    <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .button-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .youtube-button {
-            display: inline-block;
-            padding: 16px 32px;
-            background-color: #229437;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            cursor: pointer;
-            outline: none;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-    
-        }
-        
-        .youtube-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            background-color: rgba(255, 255, 255, 0.1);
-            transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
-            border-radius: 50%;
-            z-index: 0;
-            transform: translate(-50%, -50%);
-
-        }
-        
-        .youtube-button:hover::before {
-            width: 0;
-            height: 0;
-            top: 50%;
-            left: 50%;
-        }
-        
-        .youtube-button:hover {
-            background-color: #cc0000;
-            color: #fff;
-        }
-
-
-
-    </style>
+<title>Main Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333; /* Darkest gray background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  .container {
+    text-align: center;
+    animation: slideIn 1.5s forwards; /* Container animation */
+    opacity: 0; /* Initially hide container */
+    margin-top: -100px; /* Move container up to hide buttons initially */
+  }
+  .button {
+    display: block;
+    padding: 15px 30px;
+    margin: 10px auto;
+    font-size: 18px;
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 25px;
+    background-color: #229437;
+    color: #fff;
+    border: 2px solid #03ff74;
+    opacity: 0; /* Initially hide buttons */
+    animation: slideDown 1s forwards; /* Button animation */
+    transition: all 0.7s ease; /* Smooth transition */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Shadow */
+  }
+  .button:hover {
+    background-color: #1b633c;
+  }
+  .button:active {
+    transform: scale(0.6); /* Shrink the button on press */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+  }
+  @keyframes slideIn {
+    100% { opacity: 1; margin-top: 0; }
+  }
+  @keyframes slideDown {
+    0% { opacity: 0; margin-top: -100px; }
+    100% { opacity: 1; margin-top: 0; }
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222; /* Darker gray footer background */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px; /* Smaller font size */
+  }
+  .falling-emoji {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    animation: fall 3s linear forwards;
+  }
+  @keyframes fall {
+    0% { top: -50px; opacity: 1; }
+    100% { top: calc(100vh - 50px); opacity: 0; }
+  }
+</style>
 </head>
 <body>
 
-    <h3>
-        <br>
-    <div class="button-container">
-        <a href="main.html" target="_blank" class="youtube-button">රාජධානි</a>
-    </br>
+<div class="container">
+  <button class="button" onclick="setTimeout(function(){ window.location.href='main.html'; }, 2000)">රාජදානි</button>
+
+  <button class="button" onclick="setTimeout(function(){ window.location.href=''; }, 2000)">SHORT VIDEOS</button>
+  
+  <button class="button" onclick="setTimeout(function(){ window.location.href='zoom.html'; }, 2000)">ZOOM RECORDING</button>
+  
+</div>
 
 
-    </div>
-    <br>
-    <div class="button-container">
-        <a href="zoom.html" target="_blank" class="youtube-button">RECORDINGS</a>
-    </div>
-    <br>
-    <div class="button-container">
-        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="youtube-button">SHORT VIDEO</a>
-    </div>
-    <style>
-  body {
-    background-image: url('https://telegra.ph/file/e02fa81bcc97fc898c7e4.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    font-family: Arial, sans-serif; /* Optional: Set a font for the body */
-  }
 
-  /* Optional: Style for content */
-  .content {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow */
-  }
-
-  /* Optional: Style for heading */
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-
-  /* Optional: Style for paragraph */
-  p {
-    line-height: 1.6;
-    color: #555;
-  }
-</style>
+</body>
+</html>
