@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Red Button Animation</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .youtube-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: #229437;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            outline: none;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+    
+        }
+        
+        .youtube-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(255, 255, 255, 0.1);
+            transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, left 0.3s ease;
+            border-radius: 50%;
+            z-index: 0;
+            transform: translate(-50%, -50%);
+
+        }
+        
+        .youtube-button:hover::before {
+            width: 0;
+            height: 0;
+            top: 50%;
+            left: 50%;
+        }
+        
+        .youtube-button:hover {
+            background-color: #cc0000;
+            color: #fff;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <h3>
+        <br>
+    <div class="button-container">
+        <a href="rajadani.html" target="_blank" class="youtube-button">රාජධානි</a>
+    </br>
+
+
+    </div>
+    <br>
+    <div class="button-container">
+        <a href="zoom.html" target="_blank" class="youtube-button">RECORDINGS</a>
+    </div>
+    <br>
+    <div class="button-container">
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="youtube-button">SHORT VIDEO</a>
+    </div>
+    <style>
+  body {
+    background-image: url('https://telegra.ph/file/e02fa81bcc97fc898c7e4.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif; /* Optional: Set a font for the body */
+  }
+
+  /* Optional: Style for content */
+  .content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow */
+  }
+
+  /* Optional: Style for heading */
+  h1 {
+    text-align: center;
+    color: #333;
+  }
+
+  /* Optional: Style for paragraph */
+  p {
+    line-height: 1.6;
+    color: #555;
+  }
+</style>
