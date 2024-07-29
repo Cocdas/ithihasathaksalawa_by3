@@ -1,92 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ITHIHASA THAKSALAWA MENU</title>
+<html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
 
-<title>Main Page</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #333; /* Darkest gray background */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-  }
-  .container {
-    text-align: center;
-    animation: slideIn 1.5s forwards; /* Container animation */
-    opacity: 0; /* Initially hide container */
-    margin-top: -100px; /* Move container up to hide buttons initially */
-  }
-  .button {
-    display: block;
-    padding: 15px 30px;
-    margin: 10px auto;
-    font-size: 18px;
-    font-weight: bold; /* Bold text */
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 25px;
-    background-color: #229437;
-    color: #fff;
-    border: 2px solid #03ff74;
-    opacity: 0; /* Initially hide buttons */
-    animation: slideDown 1s forwards; /* Button animation */
-    transition: all 0.7s ease; /* Smooth transition */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Shadow */
-  }
-  .button:hover {
-    background-color: #1b633c;
-  }
-  .button:active {
-    transform: scale(0.6); /* Shrink the button on press */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow */
-  }
-  @keyframes slideIn {
-    100% { opacity: 1; margin-top: 0; }
-  }
-  @keyframes slideDown {
-    0% { opacity: 0; margin-top: -100px; }
-    100% { opacity: 1; margin-top: 0; }
-  }
-  footer {
+    
+
+    .button-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      margin-top: -40px;
+      opacity: 0;
+      animation: fadeIn 6s forwards;
+    }
+
+    .button {
+      width: 150px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px 15px;
+      background-color: red;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      position: relative;
+      cursor: pointer;
+      font-weight: 900;
+      transition-duration: .2s;
+      background: linear-gradient(0deg, #000, #272727);
+      text-decoration: none;
+    }
+
+  
+    footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     background-color: #222; /* Darker gray footer background */
-    color: #fff;
+    color: #666;
     padding: 10px 0;
     text-align: center;
-    font-size: 14px; /* Smaller font size */
+    font-size: 14px;
+    
   }
-  .falling-emoji {
-    position: absolute;
-    font-size: 30px;
-    color: white;
-    animation: fall 3s linear forwards;
-  }
-  @keyframes fall {
-    0% { top: -50px; opacity: 1; }
-    100% { top: calc(100vh - 50px); opacity: 0; }
-  }
-</style>
+    .button:before, .button:after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      border-radius: 15px;
+      background: linear-gradient(45deg, #daeb23, #15ff00, #000000,#000000,#09e8d9);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: steam 10s linear infinite;
+    }
+
+    @keyframes steam {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .button:after {
+      filter: blur(50px);
+    }
+
+    .button span {
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="button-container">
+    <h3>ITHIHASA THAKSALAWA MENU</h3>
+    <div></div>
+    <a href="main.html" class="button" target="_blank"> <span>‍රාජදානි</span> </a>
+     <br>
+    <a href="" class="button" target="_blank"> <span>SHORT-VIDEOS</span> </a>
 
-<div class="container">
-  <button class="button" onclick="setTimeout(function(){ window.location.href='main.html'; }, 2000)">රාජදානි</button>
+     <br>
+    <a href="shortnotes.html" class="button" target="_blank"> <span>SHORT-NOTES</span> </a> <br>
+    <br>
+        <br>
 
-  <button class="button" onclick="setTimeout(function(){ window.location.href=''; }, 2000)">SHORT VIDEOS</button>
+    <br>
+
+    <br>
+
+    <br>
+
+
+
+    
+    <footer>
+      DEVOLOPER BY NETHSARA ~ <span id="currentYear"></span>
+    </footer>
   
-  <button class="button" onclick="setTimeout(function(){ window.location.href='shortnotes.html'; }, 2000)">SHORT NOTES PDF</button>
-  
-</div>
 
 
-
-</body>
-</html>
+</div></body></html>
