@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connection Loading Animation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .loader, .main-content {
+            transition: opacity 0.5s ease;
+        }
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top-color: #3498db;
+            animation: spin 1s ease-in-out infinite;
+            margin-top: 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .loader-text {
+            margin-top: 10px;
+            font-size: 1.2em;
+            color: #3498db;
+        }
+        .hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .main-content {
+            display: none;
+            opacity: 0;
+            text-align: center;
+        }
+        .visible {
+            display: block;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <div class="loader-text">Connecting...</div>
+    <div class="main-content hidden">
+        
+        
+        
+        <section>
+            
+            
+            <a href="home.html" class="button" target="_blank"> <span>‍GO</span> </a>
+     <br>
+        </section>
+        
+    </div>
+
+    <script>
+        window.onload = function() {
+            setTimeout(() => {
+                document.querySelector('.loader').classList.add('hidden');
+                document.querySelector('.loader-text').classList.add('hidden');
+                document.querySelector('.main-content').classList.remove('hidden');
+                document.querySelector('.main-content').classList.add('visible');
+            }, 3000); // Change the timeout duration as needed
+        }
+
+        function speakText(text) {
+            const utterance = new SpeechSynthesisUtterance(text);
+            speechSynthesis.speak(utterance);
+        }
+
+        function playVoice(text) {
+            speakText(text);
+        }
+    </script>
+    <style>
+    body {
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+
+    
+
+    .button-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      margin-top: 40px;
+      opacity: 0;
+      animation: fadeIn 30s forwards;
+    }
+
+    .button {
+      width: 150px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px 15px;
+      background-color: red;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      position: relative;
+      cursor: pointer;
+      font-weight: 900;
+      transition-duration: .2s;
+      background: linear-gradient(0deg, #000, #272727);
+      text-decoration: none;
+    }
+
+  
+    footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222; /* Darker gray footer background */
+    color: #666;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    
+  }
+    .button:before, .button:after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      border-radius: 15px;
+      background: linear-gradient(45deg, #daeb23, #15ff00, #000000,#000000,#09e8d9);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: steam 10s linear infinite;
+    }
+
+    @keyframes steam {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .button:after {
+      filter: blur(50px);
+    }
+
+    .button span {
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <h3>ITHIHASA THAKSALAWA </h3>
+    <div></div>
+    
+</body>
+</html>
