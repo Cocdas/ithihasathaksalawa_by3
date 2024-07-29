@@ -1,273 +1,162 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<title>shortnotes</title>
-	<body>
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #f0f0f0;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Notes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://telegra.ph/file/bfde6198385fd3acb8107.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
 
-    .button-container {
-        position: relative;
-    }
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for better contrast */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #fff; /* White text color */
+        }
 
-    .button {
-        display: inline-block;
-        padding: 15px 30px;
-        font-size: 18px;
-        color: #fff;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        overflow: hidden;
-        position: relative;
-        transition: all 0.3s ease;
-        z-index: 1;
-        text-decoration: none;
-    }
+        .button-container {
+            position: relative;
+            text-align: center;
+            margin: 10px 0;
+        }
 
-    .button::before {
-        content: '';
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.3);
-        width: 10%;
-        height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        border-radius: 50%;
-        transition: all 0.4s ease;
-        z-index: -1;
-    }
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            z-index: 1;
+            text-decoration: none;
+            margin: 10px 0; /* Add margin to separate buttons */
+        }
 
-    .button:hover::before {
-        transform: translate(-50%, -50%) scale(3);
-    }
+        .button::before {
+            content: '';
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.3);
+            width: 10%;
+            height: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            z-index: -1;
+        }
 
-</style>
+        .button:hover::before {
+            transform: translate(-50%, -50%) scale(3);
+        }
+
+        p, li {
+            color: #FFFFFF; /* Ensure text is white */
+            font-size: 18px; /* Increase font size */
+            line-height: 1.6; /* Increase line height for better readability */
+        }
+
+        h3 {
+            color: #FFFFFF; /* Ensure headings are white */
+            text-align: center;
+            margin-top: 0;
+            font-size: 24px; /* Increase font size for headings */
+        }
+
+        @media screen and (max-width: 600px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
+<body>
+    <div class="content">
+        <h3>Short Notes</h3>
+        <p><b>01. ඉතිහාසය හැදෑරීමේ මූලාශ්‍ර</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15834/lesson-01-2.pdf" class="button">Download Lesson Note 01</a>
+            <a href="/pastpapers.wiki/download/7815/grade-10/15833/10-1.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-<p align="left">
-<h3>
-	<br>
-	<br>
-	<br>
-	
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br><br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        <p><b>02. ශ්‍රී ලංකාවේ ජනාවාස</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15841/2.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15842/lesson-02-2.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <b
+        <p><b>03. පූර්ව රාජ්‍ය සමය</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15848/lesoon-03.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15847/10-3.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-<li><p> <b> <p style="color: #FFFFFF;">01. ඉතිහාසය හැදෑරීමේ මූලාශ්‍ර<br>
-<div class="button-container">
-    <a href="https://pastpapers.wiki/download/7815/grade-10/15834/lesson-01-2.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br></p>
-    <br>
+        <p><b>04. ශ්‍රී ලංකාවේ පැරණි සමාජය</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15855/lesson-o4.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15854/4.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-    
-    <a href="/pastpapers.wiki/download/7815/grade-10/15833/10-1.pdf" class="button" id="animatedButton">Download Lesson Note 02</a>
-</br>
-    <li><p><p style="color: #FFFFFF;">02.ශ්‍රී ලංකාවේ ජනාවාස<br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15841/2.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-    	<br>
+        <p><b>05. ශ්‍රී ලංකාවේ පැරණි විද්‍යාව හා තාක්ෂණය</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15861/lesson-05-2.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15860/10-5.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-    	<a href="https://pastpapers.wiki/download/7815/grade-10/15842/lesson-02-2.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
+        <p><b>06. ඓතිහාසික දැනුම් සහ එහි ප්‍රායෝගික ආදේශනය</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15867/lesson-06-2.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15865/6.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-</br>
-    <li><p><p style="color: #FFFFFF;">03.පූර්ව රාජ්‍ය සමය<br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15848/lesoon-03.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-    	<br>
+        <p><b>07. වියළි කලාපයේ පැරණි නගර පිරිහීම් හා නව රාජධානි බිහිවීම</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15873/lesson-07-2.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15872/7.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-    	<a href="https://pastpapers.wiki/download/7815/grade-10/15847/10-3.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
+        <p><b>08. මහනුවර රාජධානිය</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15881/lesoon-08.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15880/8.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-</br>
-    <li><p><p style="color: #FFFFFF;">04. ශ්‍රී ලංකාවේ පැරණි සමාජය<br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15855/lesson-o4.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-    	<br>
+        <p><b>09. පුනරුදය</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15887/lesoon-09.pdf" class="button">Download Lesson Note 01</a>
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15886/9.pdf" class="button">Download Lesson Note 02</a>
+        </div>
 
-    	<a href="https://pastpapers.wiki/download/7815/grade-10/15854/4.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
-</br>
-    <li><p><p style="color: #FFFFFF;">05.ශ්‍රී ලංකාවේ පැරණි විද්‍යාව හා තාක්ෂණය 
-
-<br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15861/lesson-05-2.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-    	<br>
-
-    	<a href="https://pastpapers.wiki/download/7815/grade-10/15860/10-5.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
-</br>
-    <li><p><p style="color: #FFFFFF;">06.ඓතිහාසික දැනුම් සහ එහි ප්‍රායෝගික ආදේශනය <br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15867/lesson-06-2.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-    	<br>
-
-    	<a href="https://pastpapers.wiki/download/7815/grade-10/15865/6.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
-<li><p><p style="color: #FFFFFF;">07.වියළි කලාපයේ පැරණි නගර පිරිහීම් හා නව රාජධානි බිහිවීම
-
- <br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15873/lesson-07-2.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-        <br>
-
-        <a href="https://pastpapers.wiki/download/7815/grade-10/15872/7.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
-<li><p><p style="color: #FFFFFF;">08.මහනුවර රාජධානිය <br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15881/lesoon-08.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-        <br>
-
-        <a href="https://pastpapers.wiki/download/7815/grade-10/15880/8.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
-<li><p><p style="color: #FFFFFF;">09. පුනරුදය <br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15887/lesoon-09.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-        <br>
-
-        <a href="https://pastpapers.wiki/download/7815/grade-10/15886/9.pdf
-" class="button" id="animatedButton">Download Lesson Note 02</a>
-<li><p><p style="color: #FFFFFF;">10. ශ්‍රී ලංකාව හා බටහිර ලෝකය <br>    <a href="https://pastpapers.wiki/download/7815/grade-10/15893/lesson-10.pdf" class="button" id="animatedButton">Download Lesson Note 01</a></br>
-        <br>
-
-        
-</font>
-<style>
-    body {
-        display: flex;
-        justify-content: justify;
-        align-items: justify;
-        height: 300vh;
-        background-color: #f0f0f0;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    .button-container {
-        position: relative;
-    }
-
-    .button {
-        display: inline-block;
-        padding: 15px 30px;
-        font-size: 18px;
-        color: #fff;
-        background-color: #007bff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        overflow: hidden;
-        position: relative;
-        transition: all 0.3s ease;
-        z-index: 1;
-        text-decoration: none;
-    }
-
-    .button::before {
-        content: '';
-        position: absolute;
-        background-color: rgba(255, 255, 255, 0.3);
-        width: 10%;
-        height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        border-radius: 50%;
-        transition: all 0.4s ease;
-        z-index: -1;
-    }
-
-    .button:hover::before {
-        transform: translate(-50%, -50%) scale(3);
-    }
-
-</style>
-<style>
-  body {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    font-family: Arial, sans-serif; /* Optional: Set a font for the body */
-    background-image: url('https://telegra.ph/file/bfde6198385fd3acb8107.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh; /* Ensure full viewport height */
-  }
-
-  /* Optional: Style for content */
-  .content {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add a box shadow */
-  }
-
-  /* Optional: Style for heading */
-  h1 {
-    text-align: center;
-    color: #333;
-  }
-
-  /* Optional: Style for paragraph */
-  p {
-    line-height: 1.6;
-    color: #555;
-  }
-</style>
+        <p><b>10. ශ්‍රී ලංකාව හා බටහිර ලෝකය</b></p>
+        <div class="button-container">
+            <a href="https://pastpapers.wiki/download/7815/grade-10/15893/lesson-10.pdf" class="button">Download Lesson Note 01</a>
+        </div>
+    </div>
+</body>
 </html>
-
-
-
