@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ithihasa Thaksalawa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-    
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -16,7 +16,7 @@
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
-        overflow-y: scroll; /* Enable scrolling */
+        overflow-y: scroll;
         opacity: 0;
         transition: opacity 1s ease-in;
     }
@@ -37,11 +37,10 @@
         display: none;
     }
 
-    
     header {
         background: #4CAF50;
         color: #fff;
-        padding: 1em 0;
+        padding: 0.5em 0;
     }
 
     header .container {
@@ -52,8 +51,9 @@
         align-items: center;
     }
 
-    header h1 {
-        margin: 0;
+    header marquee {
+        font-size: 20px;
+        font-weight: bold;
         color: #fff;
     }
 
@@ -83,7 +83,6 @@
         transform: scale(1.1);
     }
 
-    /* Section Styles */
     section {
         padding: 2em 0;
         background: rgba(0, 0, 0, 0.6);
@@ -103,8 +102,7 @@
         box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
     }
 
-   
-    .whatsapp-button, .youtube-button {
+    .icon-button {
         display: inline-block;
         padding: 10px 20px;
         border-radius: 5px;
@@ -137,6 +135,10 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
+    .icon {
+        margin-right: 8px;
+    }
+
     html {
         scroll-behavior: smooth;
     }
@@ -148,17 +150,6 @@
         <div class="container">
             <h1><marquee>ITHIHASA THAKSALAWA WEB</marquee></h1>
             <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-   
-        body {
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#news">News &amp; Updates</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
@@ -192,7 +183,9 @@
     <section id="news">
         <div class="container">
             <h2>News &amp; Updates</h2>
-            <a href="button.html" class="youtube-button" target="_blank">MAIN MENU</a>
+            <a href="button.html" class="youtube-button icon-button" target="_blank">
+                <i class="fab fa-youtube icon"></i> MENU
+            </a>
 
             <article>
                 <h3>New Program Launch</h3>
@@ -211,7 +204,9 @@
             <p>For more information or to get in touch with us, please use the following contact details:</p>
             <address>
                 <p>Email: <a href="mailto:info@ithihasathaksalawa.com">info@ithihasathaksalawa.com</a></p>
-                <p><a href="https://wa.me/+94703450504" class="whatsapp-button" target="_blank">WhatsApp no</a></p>
+                <p><a href="https://wa.me/+94703450504" class="whatsapp-button icon-button" target="_blank">
+                    <i class="fab fa-whatsapp icon"></i> WhatsApp Us
+                </a></p>
                 <p>Address: 456 Learning Lane, Colombo, Sri Lanka</p>
             </address>
         </div>
@@ -230,3 +225,4 @@
     </script>
 </body>
 </html>
+
