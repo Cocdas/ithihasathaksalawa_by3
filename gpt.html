@@ -1,97 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="si">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Chat Command</title>
+    <title>ChatGPT API Respond</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        .container {
-            max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-
-        input[type="text"], button {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            font-size: 16px;
-        }
-
-        button {
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        #response {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            background-color: #f9f9f9;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #response { margin-top: 20px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>AI Chat Command</h1>
-        <form id="chat-form">
-            <input type="text" id="question" placeholder="Ask a question..." required>
-            <button type="submit">Submit</button>
-        </form>
-        <div id="response"></div>
-    </div>
+    <h1>ChatGPT API සමඟ කතා කරන්න</h1>
+    <textarea id="query" rows="4" cols="50" placeholder="ඔබගේ ප්‍රශ්නය මෙහි ලියන්න..."></textarea><br>
+    <button id="send">ඉවත්වන්න</button>
+
+    <div id="response"></div>
 
     <script>
-        document.getElementById('chat-form').addEventListener('submit', async function (e) {
-            e.preventDefault();
+        document.getElementById('send').addEventListener('click', async () => {
+            const query = document.getElementById('query').value;
+            const responseDiv = document.getElementById('response');
 
-            const question = document.getElementById('question').value;
-
-            if (!question.trim()) {
-                alert('Please enter a question.');
-                return;
-            }
-
-            document.getElementById('response').innerHTML = 'Waiting for response...';
+            responseDiv.innerHTML = 'Loading...';
 
             try {
-                const response = await fetch(`https://chatgptforprabath-md.vercel.app/api/gptv1?q=${encodeURIComponent(question)}`, {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                });
-
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                document.getElementById('response').textContent = data.response || "No response received";
+                const res = await fetch('https://chatgptforprabath-md.vercel.app/api/gptv1?q=' + encodeURIComponent(query));
+                const data = await res.json();
+                responseDiv.innerHTML = data.response; // Assuming your API returns the response in this format
             } catch (error) {
-                console.error('Error:', error);
-                document.getElementById('response').textContent = 'An error occurred: ' + error.message;
+                responseDiv.innerHTML = 'Error: ' + error.message;
             }
         });
     </script>
